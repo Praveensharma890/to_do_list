@@ -169,7 +169,7 @@ body{
 
 
 .bottom__note label{
-      font-size : 1.3rem;
+      font-size : 1.1rem;
       color : var(--theme-color);
 }
 
@@ -181,6 +181,7 @@ body{
 .bottom__note h4{
     color : var(--heading-color);
     font-weight : normal;
+    font-size : 1rem;
 }
 
 .bottom__note{
@@ -190,6 +191,9 @@ body{
     display : block;
 }
 
+.bottom-theme{
+    margin-top : 0.3rem;
+}
 
 /* list container */
 
@@ -410,16 +414,35 @@ body{
 
 
 @media screen and (max-width : 500px){
+    .heading__title{
+        font-size : 1.6rem;
+    }
+    .menu-title {
+        font-size : 1.4rem;
+    }
+    .top__note h3 {
+    font-size: 1.2rem;
+    }
+    .pluscontainer i {
+        font-size: 1.4rem;
+        padding :  1rem;
+    }
+    .emptyNote {
+        font-size : 1.2rem;
+    }
+    .bottom__note label {
+    font-size: 1rem;
+    }
+    .bottom_note h4{
+        font-size : 1rem;
+    }
     .buttons{
          right : 3.5rem;
     }
     .notes{
         width : 90%;
     }
-    
-    .heading__title{
-        font-size : 2rem;
-    }
+
     .input-container{
         height : 8%;
         width : 95%;
@@ -428,10 +451,7 @@ body{
         height : 100%;
         width : 80%;
     }
-    .pluscontainer i{
-        font-size : 1.7rem;
-        padding :  1rem;
-    }
+    
     #menu-icon{
         height : 30px;
         width : 30px;
@@ -445,9 +465,6 @@ body{
 }
 
 @media screen and (max-width  : 390px){
-    .heading__title{
-        font-size : 2rem;
-    }
       .input-container{
         height : 8%;
         width : 100%;
@@ -475,7 +492,5 @@ body{
     .add-btn{
         font-size : 1rem;
     }
-    .heading__title {
-        font-size: 1.8rem;
-    }
+
 }
