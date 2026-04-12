@@ -104,7 +104,7 @@ body{
 /* menu-container */
 
 .menu-container{
-    height : 640px;
+    height : 85vh;
     width : 270px;
     background-color : var(--menu-background);
     position : absolute;
