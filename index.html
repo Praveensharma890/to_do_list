@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do-List</title>
+    <!-- link with css -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- link for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css">
+</head>
+<body>
+   <!-- header section -->
+    <div class="heading">
+        <!-- <i class="ri-close-large-fill"></i> -->
+        <div id="menu-icon">
+         <i class="ri-menu-line m-btn"></i>
+        </div>
+        <h1 class="heading__title">To-Do-List</h1>
+    </div>
+    
+    <!-- menu section -->
+
+    <div class="menu-container">
+             <div class="menu-title">To-Do-List</div>
+               
+             <!-- menu list -->
+              <div class="menu-list">
+               <ul class="ul">
+                  
+                <li class="li_note">
+                     <div class="top__note">
+                        <h3>Total note</h3>
+                        <i class="ri-arrow-down-s-line firsticon "></i>
+                     </div>
+                     <div class="bottom__note firstdiv">
+                        <h4 class="totalNotes"></h4>
+                     </div>
+                  </li>
+
+                 
+                  <li class="li_note">
+                     <div class="top__note">
+                        <h3>theme</h3>
+                        <i class="ri-arrow-down-s-line m-icon m-icon secondicon"></i>
+                     </div>
+                     <div class="bottom__note seconddiv">
+                        <div class="top-theme">
+                           <label for="theme1">Light</label>
+                        <input type="radio"value="light"name="theme"id="theme1"> 
+                        </div> 
+                        
+                       <div class="bottom-theme">
+                         <label for="theme2">Dark</label>
+                        <input type="radio"value="dark"name="theme"id="theme2">
+                       </div>
+                     </div>
+                  </li>
+
+                  <li class="li_note">
+                     <div class="top__note">
+                        <h3>Font</h3>
+                        <i class="ri-arrow-down-s-line m-icon thirdicon"></i>
+                     </div>
+                      <div class="bottom__note thirddiv">
+                        <label for="Roboto">Roboto</label>
+                        <input type="radio"name="font"value="Roboto"id="Roboto">
+                         <br/>
+                         <label for="RobotoCon">Roboto Condensed</label>
+                        <input type="radio"name="font"value="Roboto Condensed"id="RobotoCon">
+                         <br/>
+                        <label for="Lobster">Lobster Two</label>
+                        <input type="radio"name="font"value="Lobster"id="Lobster">
+                     </div>
+                  </li>
+
+                   <li class="li_note">
+                     <div class="top__note">
+                        <h3>About me</h3>
+                        <i class="ri-arrow-down-s-line m-icon forthicon"></i>
+                     </div>
+                     <div class="bottom__note forthdiv">
+                        <h4>Name - <br>Praveen sharma</h4>
+                        <h4>Email - <br>psharma89090@gmail.com</h4>
+                        <h4>Copyright - <br> &copy; All Rights reserved Apr 2026</h4>
+                     </div>
+                  </li>
+               </ul>
+
+              </div>
+    </div>
+
+    <!-- List container -->
+    <div class="list__Container">
+        <ul class="list">
+           
+        </ul>
+    </div>
+
+    <!-- plus icon -->
+    <div class="pluscontainer">
+      <i class="ri-add-large-line plus-icon"></i>
+    </div>
+
+    <!-- input box section -->
+    <div class="input-container">
+        <input type="text" class="input-box"placeholder="type a note....">
+        <button class="add-btn">Add</button>
+    </div>
+
+    <!-- link with javaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>

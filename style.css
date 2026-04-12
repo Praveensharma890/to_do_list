@@ -1,0 +1,481 @@
+/* font family */
+
+/* font-family: "Roboto", sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+/* font-family: "Roboto Condensed", sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+/*  font-family: "Lobster Two", sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+:root{
+    --title-color :  rgb(209, 207, 207);
+    --heading-color : rgb(0, 0, 0);
+    --body-background : rgb(166, 229, 229);
+    --header-background : rgb(17, 27, 27);
+    --menuBtn-background : rgb(251, 251, 254);
+    --menu-background : rgb(253, 253, 253);
+    --shadow-color : rgb(0, 0, 0);
+    --border-color : rgb(0, 0, 0);
+    --list-bg-color : rgb(54, 78, 80);
+    --white-border : rgb(255, 255, 255);
+    --scroll-bar : rgb(5, 114, 89);
+    --input-box-bg : rgb(157, 226, 242);
+    --bottom-border : #ffff00;
+    --plus-icon-bg : rgb(23, 134, 23);
+    --theme-color : rgb(35, 33, 33);
+    --theme-color-round : rgb(0, 0, 0);
+    --emptylist-msg : rgb(147, 147, 147);
+}
+
+[data-theme="dark"]{
+    --title-color :  #f3f3f3;
+    --heading-color : rgb(212, 212, 212);
+    --body-background : rgb(0, 0, 0);
+    --header-background : rgb(57, 42, 60);
+    --menuBtn-background : rgb(0, 0, 0);
+    --menu-background : rgb(37, 34, 34);
+    --shadow-color : rgb(191, 0, 255);
+    --border-color : rgb(255, 255, 255);
+    --list-bg-color : rgb(0, 0, 0);
+    --white-border : rgb(220, 220, 220);
+    --scroll-bar : rgb(96, 12, 130);
+    --input-box-bg : rgb(237, 175, 245);
+    --bottom-border : #7c1ebe;
+    --plus-icon-bg : rgb(96, 22, 130);
+    --theme-color : rgb(183, 183, 183);
+    --theme-color-round : rgb(96,12,130);
+    --emptylist-msg : rgb(99, 99, 99);
+}
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing : border-box;
+    scroll-behavior : smooth;
+    list-style : none;
+}
+
+body{
+    height : 100vh;
+    width : 100%;
+    background-color : var(--body-background);
+    display : flex;
+    justify-content : top;
+    align-items : center;
+    flex-direction : column;
+    gap : 0.5rem;
+}
+ 
+/* Header */
+
+.heading{
+    height : 10%;
+    width : 100%;
+    background-color : var(--header-background);
+   display : flex;
+   justify-content : center;
+   align-items  : center;
+   position : relative;
+}
+.heading__title{
+    color : var(--title-color);
+    font-size : 2.2rem;
+    font-weight : 800;
+}
+
+#menu-icon{
+    padding : 0.15rem;
+    background-color : var(--menuBtn-background);
+    border : none;
+    position : absolute;
+    left : 1.5rem;
+    transition : transform 0.4s;
+}
+
+#menu-icon:hover{
+    transform  : scale(1.05);
+}
+
+.m-btn{
+    font-size : 1.5rem;
+    color  :var(--heading-color);
+}
+
+/* menu-container */
+
+.menu-container{
+    height : 640px;
+    width : 270px;
+    background-color : var(--menu-background);
+    position : absolute;
+    border : 2px solid var(--border-color);
+    top : 5rem;
+    left : 1rem;
+    transform : translateX(-100%);
+    opacity : 0;
+    transition : 0.3s ease;
+    border-radius : 0.5rem;
+    padding : 2rem 1rem;
+    box-shadow : 1px 1px 5px var(--shadow-color);
+    display : flex;
+    flex-direction : column;
+    justify-content : top;
+    align-items : left;
+    gap : 2rem;
+    z-index : 3;
+}
+
+.display{
+    opacity : 1;
+    transform : translateX(0);
+}
+
+.menu-title{
+    text-align : center;
+    font-size : 1.7rem;
+    font-weight : 800;
+    color : var(--heading-color);
+}
+
+.ul{
+    display : flex;
+    flex-direction : column;
+    gap : 1rem;
+}
+
+.li_note{
+    display : flex;
+    flex-direction : column;
+    gap : 0.5rem;
+}
+
+.top__note{
+    display : flex;
+    gap : 0.7rem;
+}
+
+.top__note h3{
+    font-size : 1.4rem;
+    color : var(--heading-color);
+}
+
+.top__note i{
+    font-size : 1.4rem;
+}
+
+.firsticon,.secondicon,.thirdicon,.forthicon{
+    color : var(--border-color);
+}
+
+
+.bottom__note label{
+      font-size : 1.3rem;
+      color : var(--theme-color);
+}
+
+#theme1,#theme2,#Roboto,#RobotoCon,#Lobster{
+      transform : scale(1.5);
+      accent-color : var(--theme-color-round);
+}
+
+.bottom__note h4{
+    color : var(--heading-color);
+    font-weight : normal;
+}
+
+.bottom__note{
+    display : none;
+}
+.bottom__note__view{
+    display : block;
+}
+
+
+/* list container */
+
+.list__Container{
+    height : 73%;
+    width : 90%;
+    background-color :  var(--list-bg-color);
+    border : 2px solid var(--white-border);
+    box-shadow : 1px 1px 5px var(--border-color);
+    border-radius : 1rem;
+    padding : 1.5rem 2rem;
+    overflow : auto;
+}
+::-webkit-scrollbar{
+    width: 0.4rem;
+    background-color : var(--white-border);
+}
+
+::-webkit-scrollbar-thumb{
+    background-color : var(--scroll-bar);
+}
+.input-container{
+    height : 11%;
+    width : 70%;
+    display : flex;
+    justify-content : center;
+    align-items : center;
+    gap : 1rem;
+}
+
+/* pluscontainer */
+.pluscontainer{
+    display : none;
+}
+
+
+.input-box{
+    height : 90%;
+    width : 75%;
+    font-size : 2rem;
+    border-radius : 0.7rem;
+    background-color : var(--input-box-bg);
+    padding : 0.5rem;
+}
+
+.add-btn{
+    font-size : 1.5rem;
+    padding : 0.3rem 0.7rem;
+    border-radius : 0.3rem;
+    color : var(--white-border);
+    background-color : var(--scroll-bar);
+    border : none;
+    transition : transform 0.3s;
+}
+
+.add-btn:hover{
+    transform : scale(1.05);
+}
+
+/* list style */
+.list li{
+    display : flex;
+    justify-content : space-between;
+    align-items : center;
+    border-bottom : 1px solid var(--bottom-border);
+    gap : 2rem;
+    position : relative;
+}
+.note{
+    width : 80%;
+    padding : 0.4rem 1rem;
+}
+.note p{
+    font-size : 1.7rem;
+    color : var(--white-border);
+}
+
+.buttons{
+    width : 12%;
+    display : flex;
+    justify-content : right;
+    align-items : center;
+    gap : 0.5rem;
+}
+
+/* buttons */
+.dltBtn,.editBtn,.okBtn{
+    font-size : 1.2rem;
+    padding : 0.2rem 0.3rem;
+    border-radius : 0.5rem;
+}
+
+/* option button */
+.optionContainer{
+    display : none;
+}
+
+.ri-more-2-fill{
+    font-size : 1.2rem;
+    color : rgb(0, 0, 0);
+    font-weight : 700;
+    border : 1px solid var(--border-color);
+    background-color : var(--white-border);
+    padding : 0.3rem;
+}
+
+
+/* edit input */
+
+.editBox{
+    width : 80%;
+    font-size : 1.5rem;
+    border-radius : 0.54rem;
+}
+
+
+/* empty note in list  */
+.emptyList{
+    height : 100%;
+    display : flex;
+    justify-content : center;
+    align-items : center;
+}
+.emptyNote{
+    color : var(--emptylist-msg);
+    font-size : 2rem;
+    font-weight : normal;
+}
+
+
+
+/* for making responsive */
+
+@media screen and (max-width : 1000px){
+    .note p{
+        font-size : 1.5rem;
+    }
+    .dltBtn,.editBtn,.okBtn{
+        font-size : 1rem;
+    }
+}
+
+@media screen and (max-width : 800px){
+   .optionContainer{
+        display : block;
+    }
+    .buttons{
+        display : none;
+        position : absolute;
+        right : 2.5rem;
+        flex-direction : column;
+        text-align : center;
+        gap : 0.3rem;
+        opacity : 0;
+        transition : opacity 0.5s ease;
+        z-index : 1;
+    }
+    .buttons.buttons_dispaly{
+        display : block;
+        opacity : 1;
+    }
+    .note{
+      width : 90%;
+    }
+
+}
+
+
+
+@media screen and (max-width : 600px){
+     body{
+        gap : 0;
+        position : relative;
+     }
+    .list__Container{
+        height : 92%;
+        width : 100%;
+        border-radius : 0;
+        border : none;
+        padding : 0.5rem 0.8rem;
+      }
+      .list li {
+        gap : 1rem;
+    }
+      .input-container{
+        width : 80%;
+        display : none;
+        position : absolute;
+        bottom : 1rem;
+      }
+      .input-container-display{
+        display : block;
+      }
+      .input-box{
+        border-radius : 0.5rem;
+        font-size : 1.4rem;
+        height : 80%;
+      }
+      .pluscontainer{
+         display : block;
+      }
+      .pluscontainer i{
+        font-size : 1.7rem;
+        background-color : var(--plus-icon-bg);
+        color : var(--white-border);
+        padding : 1rem 1rem;
+        border-radius : 50%;
+        position : absolute;
+        bottom : 5rem;
+        right : 1.3rem;
+        z-index : 2;
+      }
+    
+      ::-webkit-scrollbar{
+             width: 0.2rem;
+      }
+}
+
+
+@media screen and (max-width : 500px){
+    .buttons{
+         right : 3.5rem;
+    }
+    .notes{
+        width : 90%;
+    }
+    
+    .heading__title{
+        font-size : 2rem;
+    }
+    .input-container{
+        height : 8%;
+        width : 95%;
+    }
+    .input-box{
+        height : 100%;
+        width : 80%;
+    }
+    .pluscontainer i{
+        font-size : 1.7rem;
+        padding :  1rem;
+    }
+    #menu-icon{
+        height : 30px;
+        width : 30px;
+    }
+    .note p{
+        font-size : 1.2rem;
+    }
+    .heading{
+        height : 8%;
+    }
+}
+
+@media screen and (max-width  : 390px){
+    .heading__title{
+        font-size : 2rem;
+    }
+      .input-container{
+        height : 8%;
+        width : 100%;
+         min-width : 300px;
+    }
+    .input-box{
+        margin-left : 1.4rem;
+        height : 100%;
+        width : 70%;
+       
+    }
+    .menu-container{
+        left : 0;
+    }
+}
+
+@media screen and (max-width : 330px){
+     .input-container{
+        width : 100%;
+         min-width : 270px;
+    }
+    .input-box{
+        width : 70%;
+    }
+    .add-btn{
+        font-size : 1rem;
+    }
+    .heading__title {
+        font-size: 1.8rem;
+    }
+}
