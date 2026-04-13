@@ -142,10 +142,11 @@ function localStorageupdate(){
 
 //addbtn cliked
 addBtn.addEventListener("click",()=>{
-      if(inputBox.value !== ""){
-         
+      if(inputBox.value.trim() !== ""){
         addNote(inputBox.value);
         inputBox.value = "";
+      }else{
+            inputBox.value = "";
       }
 })
 
