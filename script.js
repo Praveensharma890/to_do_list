@@ -150,6 +150,20 @@ addBtn.addEventListener("click",()=>{
       }
 })
 
+// enter key press then add note in list
+inputBox.addEventListener("keydown",(evt)=>{
+      if(evt.key === "Enter"){
+            if(inputBox.value.trim() !== ""){
+                   addNote(inputBox.value);
+                   inputBox.value = "";
+            }
+            else{
+                   inputBox.value = "";
+            }
+      }
+})
+
+
 // arr is empty or not for empty msg
 function isEmptyorNot(){
      if(arr.length > 0){
